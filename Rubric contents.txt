@@ -1,0 +1,86 @@
+Rubrics requirement actions:
+
+The code uses a virtual environment for project isolation.
+
+## virtual environment created and used virtual environment only for this project. Conda command use to activate virtual environment.
+
+!conda activate computer_controller
+
+All required dependencies and their versions are listed in a requirements.txt file.
+
+## Please refer the requirement.txt file inside the folder. It has all dependencies.
+
+When the program encounters an error, an exception is raised and a meaningful error message is displayed.
+
+#Try: Except commands are used to throw error,if the input is not valid or if a file is not present.
+
+The program uses logging to track important events.
+## Logging function used with basicConfig of logging.DEBUG, loading of models are shown using logging.Info()
+
+The project contains a README file
+
+## Please check the Readme file inside the folder with details as required.
+
+The program organizes reusable blocks of code into functions.
+
+## On total there are 6 files as given below,
+read_and_load.py
+gaze.py
+landmark.py
+head_pose.py
+inference.py
+face_detect.py
+
+On these files, read_and_load helps to read and load the model for all the models. So the code is shared with gaze,landmark,headpose and face detect.
+
+The program encapsulates related methods and data into classes.
+
+Each model is designed using classes and objects. The reviewer can open these files and check the pipeline.
+
+Based on user input, the project uses either a video file or a webcam feed to perform inference.
+
+# Argument has to be passed as 'video' or 'cam' to access appropriately.
+
+The project includes an inference pipeline in which:
+Input frames are fed to models for inference.
+Outputs from multiple models are fed consecutively to other models.
+
+#Inference.py is the pipeline connecting all the files, takes input frame from video and displayes output.
+
+The submission includes a write-up in the README. The write-up should contain:
+Benchmarking results for models of different precisions
+Discussion of the difference in the results among the models with different precisions (for instance, are some models more accurate than others?).
+
+# Readme file has detailed explanation of various speeds obtained in various devices and the significance of precision.
+
+The code allows the user to set a flag that can display the outputs of intermediate models.
+The output is shown using a visualization of the output model (not just printed).
+
+# 'inter-viz' is the flag command used to visualize the intermediate commands
+
+The code uses command-line arguments to change the behavior of the program. For instance, specifying model file, specifying hardware type, etc.
+
+#Command line argument takes input for device to use along with path of different models
+
+Where possible, default arguments are used for when the user does not specify the arguments.
+
+#Default device used is 'CPU'
+
+A --help option should be present and should display information about the different configurations.
+
+# !python inference.py --help, gives you all the commands.
+
+The program allows the user to select a hardware option on which to run the model (CPU, VPU etc). Inference then runs on the hardware that the user has chosen.
+
+#Command line argument, the type of hardware to use can be specified.
+
+
+
+
+
+
+
+
+
+
+
