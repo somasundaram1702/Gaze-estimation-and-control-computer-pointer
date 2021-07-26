@@ -1,7 +1,5 @@
 # Computer Pointer Controller
 
-*TODO:* Write a short introduction to your project:
-
 In this project, we are trying to control the mouse pointer using various CNN models. Input for the model is either a webcam feed or the video provided by udacity. The project uses the following models,
 
 1) Face detection - Helps to identify face/faces in the given video feed
@@ -10,15 +8,13 @@ In this project, we are trying to control the mouse pointer using various CNN mo
 4) Gase estimation - The output of headpose and landmark are fed to gaze estimation, to obtain a vector. This vector directs t0 X,Y co-ordinates in screen
 
 ## Project Set Up and Installation
-*TODO:* Explain the setup procedures to run your project. For instance, this can include your project directory structure, the models you need to download and where to place them etc. Also include details about how to install the dependencies your project requires.
 
-1) All the files are present in the only folder that submitted. The current working directory is 'computer_pointer_controller'
+1) The current working directory is 'computer_pointer_controller'
 2) All the models are downloaded and kept inside the folder 'intel'. On total there are 4 models present inside
 3) Please install the libraries inside the requirement.txt file to run this model
 
 ## Demo
-*TODO:* Explain how to run a basic demo of your model.
-
+**step 1 :** Make sure you have the openvino setup installed in your local PC. 
 Run the below command
 !python inference.py --input_type video --face_path ./intel/face-detection-adas-binary-0001/FP32-INT1/face-detection-adas-binary-0001 --landmark_path ./intel/landmarks-regression-retail-0009/FP32/landmarks-regression-retail-0009 --headpose_path ./intel/head-pose-estimation-adas-0001/FP32/head-pose-estimation-adas-0001 --gaze_path ./intel/gaze-estimation-adas-0002/FP32/gaze-estimation-adas-0002 --device CPU --inter_viz
 
