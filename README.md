@@ -14,13 +14,16 @@ In this project, we are trying to control the mouse pointer using various CNN mo
 3) Please install the libraries inside the requirement.txt file to run this model
 
 ## Demo
-**step 1 :** Make sure you have the openvino setup installed in your local PC. 
-Run the below command
+**step 1 :** Make sure you have the openvino setup installed in your local PC. Follow the link to install openvino : https://docs.openvinotoolkit.org/latest/openvino_docs_install_guides_installing_openvino_linux.html#install-openvino
+<br>
+**step 2 :** Follow the above link and setup the environmental variable. After successfull linking of environmental variables, you should see "[setupvars.sh] OpenVINO environment initialized."
+<br>
+**step 3 :** Run " pip install -r requirements.txt"
+<br>
+**step 4 :**
 !python inference.py --input_type video --face_path ./intel/face-detection-adas-binary-0001/FP32-INT1/face-detection-adas-binary-0001 --landmark_path ./intel/landmarks-regression-retail-0009/FP32/landmarks-regression-retail-0009 --headpose_path ./intel/head-pose-estimation-adas-0001/FP32/head-pose-estimation-adas-0001 --gaze_path ./intel/gaze-estimation-adas-0002/FP32/gaze-estimation-adas-0002 --device CPU --inter_viz
 
-
 ## Documentation
-*TODO:* Include any documentation that users might need to better understand your project code. For instance, this is a good place to explain the command line arguments that your project supports.
 
 The command line argument contains the following commands. You run !python inference.py --help, to understand the functions in command line arguments
 1) input_type - whether to use webcam or video inside the folder 'demo.mp4'
@@ -33,7 +36,6 @@ The command line argument contains the following commands. You run !python infer
  
 
 ## Benchmarks
-*TODO:* Include the benchmark results of running your model on multiple hardwares and multiple model precisions. Your benchmarks can include: model loading time, input/output processing time, model inference time etc.
 
 model loading time, inference time on using the model in different devices like CPU, VPU, IGPU are shown in a seperate results.pdf file in the folder. Please check. Please check the load_time.jpg and inference_time.jpg images given in the folder. The time changes depending on teh number of supported layers and teh hetero plugin used.
 
